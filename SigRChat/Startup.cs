@@ -12,6 +12,7 @@ using SigRChat.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SigRChat.Hubs;
 
 namespace SigRChat
 {
@@ -32,6 +33,7 @@ namespace SigRChat
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddSignalR();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }
@@ -56,6 +58,11 @@ namespace SigRChat
             app.UseRouting();
 
             app.UseAuthentication();
+            app.UseSignalR(route =>
+            {
+                route.MapHub<ChatHub>("/Home/Index");
+            });
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
