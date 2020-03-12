@@ -16,11 +16,15 @@ namespace SigRChat.Models
         [Required]
         public string Text { get; set; }
 
-        public DateTime TimeStamp { get; set; }
+        public DateTime Timestamp { get; set; }
 
         public string UserId { get; set; }
 
         public virtual AppUser Sender { get; set; }
 
+        public Message()
+        {
+            Timestamp = DateTime.Now;
+        }
     }
 }
