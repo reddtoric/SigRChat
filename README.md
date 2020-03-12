@@ -10,7 +10,7 @@ A few differences from the video:
 - VS 2019
 - Project name; SigRChat
 - `Id` instead of `ID` (in _Models/Message.cs_)
-- `Username` instead of `UserName` (in _Models/Message.cs_ & _Views/Home/Index.cshtml_ & any other occurrences)
+- `Username` instead of `UserName` (in _Models/Message.cs_ & all occurrences within project)
 - `UserId` instead of `UserID` (in _Models/Message.cs_)
 - `@ViewBag.CurrentUsername` instead of `@ViewBag.CurrentUserName` (in _Views/Home/Index.cshtml_)
 - `Timestamp` instead of `when` (in _Models/Message.cs_ & _Views/Home/Index.cshtml_)
