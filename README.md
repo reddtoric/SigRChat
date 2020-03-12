@@ -13,7 +13,7 @@ A few differences from the video:
 - `Username` instead of `UserName` (in _Models/Message.cs_ & all occurrences within project)
 - `UserId` instead of `UserID` (in _Models/Message.cs_)
 - `@ViewBag.CurrentUsername` instead of `@ViewBag.CurrentUserName` (in _Views/Home/Index.cshtml_)
-- `Timestamp` instead of `when` (in _Models/Message.cs_ & _Views/Home/Index.cshtml_)
+- `Timestamp` instead of `when` (in _Models/Message.cs_ & _Views/Home/Index.cshtml_ & in JS files)
 - Obsolete:
 	```app.UseSignalR(route =>
 	{
