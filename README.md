@@ -28,5 +28,5 @@ A few differences from the video:
 	{
 		Timestamp = DateTime.Now;
 	}```
-	
+- changed font for easier typographic readability
 
