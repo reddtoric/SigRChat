@@ -27,7 +27,10 @@ namespace SigRChat.Controllers
         public async Task<IActionResult> Index()
         {
             var currentUser = await _userManager.GetUserAsync(User);
-            ViewBag.CurrentUsername = currentUser.Email;
+            if (User.Identity.IsAuthenticated)
+            {
+                ViewBag.CurrentUsername = currentUser.Email;
+            }
             var messages = await _context.Messages.ToListAsync();
             return View();
         }
