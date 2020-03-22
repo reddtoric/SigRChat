@@ -5,9 +5,10 @@ A simple real-time chat app created using MVC/SignalR.
 
 This project is for learning purposes. 
 
-I followed [Chat app using ASP.NET core SignalR with User identity](https://www.youtube.com/watch?v=RUZLIh4Vo20)
-[Video's src code](https://github.com/dotnettrainingacademy/publico)
+I followed [Chat app using ASP.NET core SignalR with User identity](https://www.youtube.com/watch?v=RUZLIh4Vo20)  
+[Video's src code](https://github.com/dotnettrainingacademy/publico)  
   
+---  
   
 A few differences from the video:
 - VS 2019
@@ -21,8 +22,9 @@ A few differences from the video:
 	```app.UseSignalR(route =>
 	{
 		route.MapHub<ChatHub>("/Home/Index");
-	});```
-	VS suggested alternative:
+	});
+	```
+	VS suggested alternative:  
 	`endpoints.MapHub<ChatHub>("/Home/Index");` within `app.UseEndpoints()`
 - Code snippet he skipped in _Data/ApplicationDbContext.cs_: 
 	`public DbSet<Message> Messages { get; set; }`
